@@ -9,8 +9,20 @@ export default class Ex1Controller extends Controller {
   max = 100;
 
   get size() {
-    this.info = 'Note modifié';
     return this.max - this.content.length;
+  }
+
+  get style() {
+    if (this.size > 50) {
+      return 'alert alert-success';
+    }
+    if (this.size < 50 && this.size > 20) {
+      return 'alert alert-warning';
+    }
+    if (this.size < 20) {
+      return 'alert alert-danger';
+    }
+    return 'alert alert-success';
   }
 
   @action
