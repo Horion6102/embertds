@@ -1,0 +1,9 @@
+{{page-title "Ex1"}}
+<h3>Ex 1 : Note application</h3>
+<p>Notes :</p>
+<Textarea placeholder="Entrer votre message" @value={{this.content}} maxlength={{this.max}} {{on "change" this.update}}></Textarea>
+<br>
+<button type="button" {{on "click" this.enregistre}}>Enregistrer</button><button type="button" {{on "click" this.efface}}>Effacer</button>
+<p>Nombre de caractères restant : {{this.size}}</p>
+<p>{{this.info}}</p>
+{{outlet}}
