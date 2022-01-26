@@ -13,13 +13,16 @@ export default class Ex1Controller extends Controller {
   }
 
   get style() {
-    if (this.size > 50) {
+    if (this.size == 100) {
+      return 'alert alert-light';
+    }
+    if (this.size >= 50) {
       return 'alert alert-success';
     }
-    if (this.size < 50 && this.size > 20) {
+    if (this.size < 50 && this.size >= 20) {
       return 'alert alert-warning';
     }
-    if (this.size < 20) {
+    if (this.size <= 20) {
       return 'alert alert-danger';
     }
     return 'alert alert-success';
