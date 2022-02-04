@@ -1,0 +1,21 @@
+{{page-title "Ex2"}}
+<div class="container-sm">
+  <h2>Services</h2>
+  <div>
+    <p>Choisissez les elements à inclure</p>
+    <p>{{plural @model.countActive "Aucun service selectionné" "1 service selectionné" "services selectionnés"}}</p>
+  </div>
+  <div>
+    <ul class="list-group">
+      {{#each @model.product as |product|}}
+        <li class="list-group-item {{if product.active "active"}}" {{action "toggleActive" product}}>
+          <p>{{product.name}}   {{product.price}} €</p>
+        </li>
+      {{/each}}
+    </ul>
+  </div>
+  <div>
+    <p>Total : {{@model.sumActive}} €</p>
+  </div>
+</div>
+{{outlet}}
