@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="4c1f4bbb-ca30-411b-9466-00fa020e2593" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/app/router.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/router.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/templates/application.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/application.hbs" afterDir="false" />
-    </list>
+    <list default="true" id="4c1f4bbb-ca30-411b-9466-00fa020e2593" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -64,6 +61,7 @@
       <workItem from="1644496600489" duration="2545000" />
       <workItem from="1644499579551" duration="2270000" />
       <workItem from="1644501903340" duration="4396000" />
+      <workItem from="1645708869796" duration="417000" />
     </task>
     <servers />
   </component>
