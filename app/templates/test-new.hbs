@@ -1,0 +1,15 @@
+{{page-title "TestNew"}}
+<h1>Contacts ({{@model.length}})</h1>
+<ul>
+  {{#each @model as |contact|}}
+    <li>
+      {{contact.nom this.prenom}}
+      <button {{action "delete" contact}}>Del</button>
+    </li>
+  {{/each}}
+</ul>
+<Input @type="text" @value={{this.nom}}/>
+<Input @type="text" @value={{this.prenom}}/>
+<Input @type="email" @value={{this.email}}/>
+<button {{action "add" this.nom}}>Ajouter contact</button>
+{{outlet}}
