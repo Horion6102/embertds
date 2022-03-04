@@ -1,0 +1,14 @@
+{{page-title "Stepx"}}
+<MultiSelect class="form-control" @elements={{this.dispoItems}} @selected={{this.dispoItems_}} @onChange={{this.changeDispo}}/>
+
+<div {{action "add" this.dispoItems this.includedItems this.dispoItems_}} class="btn btn-primary">
+
+<MultiSelect class="form-control" @elements={{this.includedItems}} @selected={{this.includedItems}} @onChange={{this.changeIncluded}}/>
+
+</div>
+<ul>
+  {{#each this.dispoItems_ as |Item|}}
+    <li>{{item.title}}</li>
+  {{/each}}
+</ul>
+{{outlet}}
