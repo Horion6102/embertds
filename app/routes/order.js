@@ -6,6 +6,6 @@ export default class OrderRoute extends Route {
   @service store;
 
   model(params) {
-    return this.store.findRecord("order",params.order_id,{include: 'orderdetails.product'});
+    return this.store.findRecord("order",params.order_id,{include: 'user,orderdetails.product'});
   }
 }

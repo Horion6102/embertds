@@ -1,11 +1,12 @@
 {{page-title "Order"}}
-<h3>Liste des produits :</h3>
+<h1>Liste des produits :</h1>
+<p>{{@model.user.name}} ({{@model.user.email}})</p>
 <p>{{@model.dateCreation}}</p>
 <table style="width: 100%;border-collapse: collapse;">
   <thead>
     <tr>
       <td style="border: 1px solid black">Nom</td>
-      <td style="border: 1px solid black">Qantitée</td>
+      <td style="border: 1px solid black">Quantitée</td>
       <td style="border: 1px solid black">Prix</td>
       <td style="border: 1px solid black">Montant</td>
       <td style="border: 1px solid black">Preparation</td>
@@ -18,7 +19,7 @@
       <td style="border: 1px solid black">  {{elm.quantity}} </td>
       <td style="border: 1px solid black">  {{elm.product.price}} € </td>
       <td style="border: 1px solid black">  {{elm.amount}} € </td>
-      <td style="border: 1px solid black">  <input type="checkbox"  checked> </td>
+      <td style="border: 1px solid black">  <Input @type="checkbox"/> </td>
     </tr>
     {{/each}}
   </tbody>
@@ -30,4 +31,7 @@
     <td style="border: 1px solid black">{{@model.toPay}} €</td>
   </tfoot>
 </table>
+
+<h2>Produit preparé ()</h2>
+
 {{outlet}}
