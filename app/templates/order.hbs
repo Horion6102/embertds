@@ -33,5 +33,12 @@
 </table>
 
 <h2>Produit preparé ()</h2>
-
+{{#each @model.orderdetails as |elm|}}
+  {{#if elm.prepared}}
+    <h5>{{elm.product.name}}</h5>
+    <p>{{elm.product.price}} X {{elm.quantity}}</p>
+    <hr>
+  {{/if}}
+{{/each}}
+<a href="../board">Valider pour {{@model.amount}} €</a>
 {{outlet}}
